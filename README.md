@@ -3,6 +3,19 @@ Call torch functions from python.
 
 Did you train some super awesome nn model in Torch7?  Now do you want to deploy it as a web service with a python web server or use it as a subroutine in a PySpark script for big data analytics?  Using Lua in C is pretty easy, and to make it even easier to convert between Lua and Python types, here's a short cython script to get you started.
 
+# Installation
+```
+git clone https://github.com/kmatzen/python2torch.git
+cd python2torch
+```
+Now you have to modify `include_dirs` and `library_dirs` in setup.py so they point to your torch distribution. Then run:
+```
+python setup.py build
+sudo python setup.py install
+```
+You are all set!
+
+# How to Use
 Let's start with an example.  Say you have this following lua script which defines the functions you wish to call.
 
 mah_stuff.lua

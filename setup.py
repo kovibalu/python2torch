@@ -7,6 +7,11 @@ from Cython.Distutils import build_ext
 import numpy
 
 setup(
+  name="python2torch",
+  version="0.1",
+  description="Call torch functions from python.",
+  author="Kevin Matzen",
+  url="https://github.com/kmatzen/python2torch",
   cmdclass = {'build_ext': build_ext},
   ext_modules = [
     Extension("python2torch",
